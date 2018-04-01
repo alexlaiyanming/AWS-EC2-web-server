@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<html>
+<head>
+</head>
+    <body>
+    	<div class="container">
+        <p><dt>The buckets are as below:-</dt></p>
+        <table class="table table-striped">
+    	<thead>
+        	<tr>
+        <th>{{ s3_buckets }}</th>
+        </thead>
+    	</table>
+        </div>
+<div class="container">
+    <form action="/s3/list/" method="post">
+      <dl>
+  	  <dt>select bucket name:
+      <input type="text" name="s3_list">
+      <input type="submit" class="btn btn-info" value="list object">
+      </dt>
+  	  </dl>
+    </form>
+</div>
+<div class="container">
+    <form action="/s3/upload/" method="post" enctype="multipart/form-data" >
+    <dl>
+  	<dt>
+    select bucket name:<br>
+    <input type="text" name="s3_bucket"><br>
+    choose file to upload:<br>
+    <input type="file" name="file">
+    <input type="submit" class="btn btn-info" value="upload">
+    </dt>
+  	</dl>
+    </form>
+</div>
+    </body>
+</html>
+<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form -->

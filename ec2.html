@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<html>
+<head>
+</head>
+<body>
+    <div class="container">
+    <p><dt>The instance's ID are as below:-</dt></p>
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>{{ r1 }}</th>
+      </tr>
+    </thead>
+    </table>
+    </div>
+<div class="container">
+<form action="/ec2/start/" method="post">
+  <dl>
+  <dt>select instance id:
+  <input type="text" name="ec2_id">
+  <input type="submit" class="btn btn-info" value="start">
+  </dt>
+  </dl>
+</form>
+    </div>
+<div class="container">
+<form action="/ec2/stop/" method="post">
+  <dl>
+  <dt>select instance id:
+  <input type="text" name="ec2_id">
+  <input type="submit" class="btn btn-info" value="stop">
+  </dt>
+  </dl>
+</form>
+</div>
+<div class="container">
+<form action="/ec2/snapshot/" method="post">
+  <dl>
+  <dt>select instance id:
+  <input type="text" name="ec2_id">
+  <input type="submit" class="btn btn-info" value="snapshot">
+  </dt>
+  </dl>
+</form>
+</div>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+</html>
